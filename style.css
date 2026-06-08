@@ -44,7 +44,7 @@ p, h1, h2, h3, h4, h5, h6, ul {
     z-index: -1;
     top: -408px;
     left: 0;
-    background-image: url(images/bg_dandelions.png);
+    background-image: url('images/bg_dandelions.png');
     width: 790px;
     height: 697px;
 }
