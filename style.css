@@ -9,19 +9,8 @@ body {
     color: #515076;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p, h1, h2, h3, h4, h5, h6, ul {
     margin: 0;
-}
-
-
-.bg-dandeliones {
-    position: absolute;
-    z-index: -1;
-    top: -408px;
-    left: 0;
-    background-image: url(images/bg_dandelions.png);
-    width: 790px;
-    height: 697px;
 }
 
 .title {
@@ -31,6 +20,8 @@ p, h1, h2, h3, h4, h5, h6 {
     text-align: center;
     padding-top: 220px;
     padding-bottom: 110px;
+    position: relative;
+    z-index: 1;
 }
 
 .container {
@@ -39,18 +30,35 @@ p, h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
 }
 
+.product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+    justify-content: center;
+    width: 1110px;
+    position: relative;
+}
+
+.bg-dandeliones {
+    position: absolute;
+    z-index: -1;
+    top: -408px;
+    left: 0;
+    background-image: url('images/bg_dandelions.png');
+    width: 790px;
+    height: 697px;
+}
+
 .product-card {
     width: 340px;
     background-color: #F7F7FA;
     padding: 25px;
-    position: relative;
-    z-index: 1;
 }
 
 .card-img {
     width: 290px;
     height: 245px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .selection-skin {
@@ -58,7 +66,8 @@ p, h1, h2, h3, h4, h5, h6 {
     line-height: 24px;
     font-weight: 400;
     color: #A5A3B9;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .head {
@@ -93,6 +102,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .card-price-wrapper {
     display: flex;
     justify-content: space-between;
+    margin-top: 25px;
 }
 
 .card-price-text {
@@ -106,13 +116,7 @@ p, h1, h2, h3, h4, h5, h6 {
     line-height: 24px;
 }
 
-.product-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 45px;
-    justify-content: center;
-    width: 1110px;
-}
+
 
 
 
