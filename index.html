@@ -12,8 +12,13 @@
 </head>
 <body>
   <!-- Main -->
-  <main class="title">
-    <h1 class="title__name">Выбери свой продукт</h1>
+  <main class="title">    
+    <h1 class="title__name">Выбери свой продукт</h1> 
+    <div class="title-buttons">
+      <button id="toggle-color-card" class="title__button">Измени цвет карточки</button>
+      <button id="change-colors-cards" class="title__button">Измени цвета карточек</button>
+      <button id="toggle-color-button" class="title__button">Измени цвет кнопки</button>
+    </div>
   </main>
   <div class="container">
     <div class="catalog">
@@ -32,7 +37,8 @@
         <div class="price-wrapper">  
           <p class="price-wrapper__text">Цена</p>
           <p class="price-wrapper__value">2 750 &#8381;</p>
-        </div>  
+        </div> 
+        <button class="product-card__button">Ссылка на товар</button> 
       </section>
 
       <section class="product-card">
@@ -49,7 +55,8 @@
         <div class="price-wrapper"> 
           <p class="price-wrapper__text">Цена</p>
           <p class="price-wrapper__value">3 500 &#8381;</p>
-        </div>  
+        </div>
+        <button class="product-card__button">Ссылка на товар</button>   
       </section>
 
       <section class="product-card">
@@ -67,6 +74,7 @@
           <p class="price-wrapper__text">Цена</p>
           <p class="price-wrapper__value">1 650 &#8381;</p>
         </div>
+        <button class="product-card__button">Ссылка на товар</button> 
       </section>
 
       <section class="product-card">
@@ -83,7 +91,8 @@
         <div class="price-wrapper"> 
           <p class="price-wrapper__text">Цена</p>
           <p class="price-wrapper__value">4 750 &#8381;</p>
-        </div>  
+        </div> 
+        <button class="product-card__button">Ссылка на товар</button>  
       </section>
 
       <section class="product-card">
@@ -101,8 +110,10 @@
           <p class="price-wrapper__text">Цена</p>
           <p class="price-wrapper__value">7 520 &#8381;</p>
         </div>
+        <button class="product-card__button">Ссылка на товар</button> 
       </section>
     </div>
   </div>  
+  <script src="main.js"></script>
 </body>
 </html>
