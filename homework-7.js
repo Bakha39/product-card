@@ -6,13 +6,13 @@ showWeatherForecast('Калининграде', 30)
 
 const SPEED_OF_LIGHT = 299792458;
 function checkSpeed(speed) {
-    if(speed > SPEED_OF_LIGHT) {
+    if (speed > SPEED_OF_LIGHT) {
         console.log("Сверхсветовая скорость");
-    } else if(speed < SPEED_OF_LIGHT) {
+    } else if (speed < SPEED_OF_LIGHT) {
         console.log("Субсветовая скорость");
-        } else {
-            console.log("Скорость света");
-        }
+    } else {
+        console.log("Скорость света");
+    }
 }
 checkSpeed(1000000)
 
@@ -20,10 +20,10 @@ checkSpeed(1000000)
 const product = "Парфюмированный шампунь";
 const priceProduct = 10;
 function checkBudget(currentBudget) {
-    if(currentBudget >= 10) {
+    if (currentBudget >= 10) {
         console.log(`${product} приобретен. Спасибо за покупку!`);
     } else {
-        console.log(`Вам не хватает ${priceProduct - currentBudget}$, пополните баланс`) ;
+        console.log(`Вам не хватает ${priceProduct - currentBudget}$, пополните баланс`);
     }
 }
 checkBudget(9)
