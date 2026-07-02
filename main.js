@@ -40,3 +40,4 @@ const toggleColorBtn = document.querySelector('#toggle-color-button')
 toggleColorBtn.addEventListener('click', () => {
     toggleColorBtn.classList.toggle('title__button--color3');
 })
+
