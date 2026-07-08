@@ -56,9 +56,24 @@ console.log(products)
 
 //8. Применение метода push к массиву
 const books = [
-    {title: 'Catch me if you can', author: 'Frank W. Abagnale', dateOfPublication: 1980, coverColor: 'gray'},
-    {title: 'Atomic Habits', author: 'James Clear', dateOfPublication: 2018, coverColor: 'yellow'},
-    {title: 'Миссия выполнима. Технология счастливой жизни', author: 'Маргулан Калиевич Сейсембай', dateOfPublication: 2023, coverColor: 'серый'}
+    {
+        title: 'Catch me if you can', 
+        author: 'Frank W. Abagnale', 
+        dateOfPublication: 1980, 
+        coverColor: 'gray'
+    },
+    {
+        title: 'Atomic Habits', 
+        author: 'James Clear', 
+        dateOfPublication: 2018, 
+        coverColor: 'yellow'
+    },
+    {
+        title: 'Миссия выполнима. Технология счастливой жизни', 
+        author: 'Маргулан Калиевич Сейсембай', 
+        dateOfPublication: 2023, 
+        coverColor: 'серый'
+    }
 ]
 
 books.push({
@@ -72,8 +87,20 @@ console.log(books)
 
 //9.Создать еще один массив, относящийся к определенной сущности. С помощью известного нам метода массива или оператора, объединить эти два массива в один
 const definedGenreBooks = [
-    {title: 'Atomic Habits', author: 'James Clear', dateOfPublication: 2018, coverColor: 'yellow', genre: 'personal development'},
-    {title: 'Миссия выполнима. Технология счастливой жизни', author: 'Маргулан Калиевич Сейсембай', dateOfPublication: 2023, coverColor: 'серый', genre: 'personal development'}
+    {
+        title: 'Atomic Habits', 
+        author: 'James Clear', 
+        dateOfPublication: 2018, 
+        coverColor: 'yellow', 
+        genre: 'personal development'
+    },
+    {
+        title: 'Миссия выполнима. Технология счастливой жизни', 
+        author: 'Маргулан Калиевич Сейсембай', 
+        dateOfPublication: 2023, 
+        coverColor: 'серый', 
+        genre: 'personal development'
+    }
 ]
 
 const allBooks = [...books, ...definedGenreBooks]
