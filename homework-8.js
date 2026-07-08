@@ -43,15 +43,14 @@ const user = {
     city: 'Калининград'
 }
 
-function getValue(obj, propName) {
+function getValueOfObject(obj, propName) {
     return obj[propName];
 }
 
-console.log(getValue(user, 'name'))
+console.log(getValueOfObject(user, 'name'))
 
 
 //7. Создать массив с названием продуктов
-
 const products = ['яблоко', 'арбуз', 'виноград']
 console.log(products)
 
@@ -62,12 +61,16 @@ const books = [
     {title: 'Миссия выполнима. Технология счастливой жизни', author: 'Маргулан Калиевич Сейсембай', dateOfPublication: 2023, coverColor: 'серый'}
 ]
 
-const addedbook = books.push({title: 'Головы профессора Уайта', author: 'Брэнди Скиллаче', dateOfPublication: 2022, coverColor: 'серый'})
+books.push({
+    title: 'Головы профессора Уайта', 
+    author: 'Брэнди Скиллаче', 
+    dateOfPublication: 2022, 
+    coverColor: 'серый'
+})
+
 console.log(books)
 
-
-//9.Создать еще один массив, относящийся к определенной сущности. С помощью известного нам метода массива или оператора (рекомендую использовать оператор), объединить эти два массива в один
-
+//9.Создать еще один массив, относящийся к определенной сущности. С помощью известного нам метода массива или оператора, объединить эти два массива в один
 const definedGenreBooks = [
     {title: 'Atomic Habits', author: 'James Clear', dateOfPublication: 2018, coverColor: 'yellow', genre: 'personal development'},
     {title: 'Миссия выполнима. Технология счастливой жизни', author: 'Маргулан Калиевич Сейсембай', dateOfPublication: 2023, coverColor: 'серый', genre: 'personal development'}
@@ -77,7 +80,6 @@ const allBooks = [...books, ...definedGenreBooks]
 console.log(allBooks)
 
 //10. Использовать метод map для создания нового масива, вызвав функцию для каждой сущности (элемента) исходного массива из задания №9, добавить свойство isRare и использовать логику
-
 const updatedBooks = definedGenreBooks.map(function(book) {
     if (book.genre === 'personal development') {
         return {...book, isRare: true}
