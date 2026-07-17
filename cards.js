@@ -1,7 +1,7 @@
 /* Создаем файл js, где будет хранится массив объектов, которые представляют собой продуктовые карточки из вёрстки (имейте ввиду, UI-данные не относятся к данным продукта. Гуглите). Вам нужно описать полностью объект и продублировать его для всех карточек и после импортировать в homework-10 для дальнейшей работы с ним. */
 export const productCards = [
     {
-      image: './images/moisturizing_mousse.png',
+      image: 'moisturizing_mousse',
       alt: 'Увлажняющий мусс',
       comment: 'для нормальной кожи',
       title: 'Увлажняющий мусс',
@@ -12,11 +12,10 @@ export const productCards = [
         'витамины C, A, PP, B и E', 
         'солнцезащитные компоненты'
       ],
-      textPrice: 'Цена',
       valuePrice: '2 750'
     },
     {
-      image: './images/moisturizing_mousse.png',
+      image: 'retexturising_mask',
       alt: "Увлажняющая маска",
       comment: 'для нормальной кожи',
       title: 'Увлажняющая маска',
@@ -27,11 +26,10 @@ export const productCards = [
         'минералы',
         'масла' 
       ],
-      textPrice: 'Цена',
       valuePrice: '3 500'
     },
     {
-      image: './images/moisturizing_mousse.png',
+      image: 'face_wash_mask',
       alt: 'Гель для умывания',
       comment: 'для нормальной кожи',
       title: 'Гель для умывания',
@@ -42,11 +40,10 @@ export const productCards = [
         'витамины С, А, РР, В и Е',
         'солнцезащитные компоненты' 
       ],
-      textPrice: 'Цена',
       valuePrice: '1 650'
     },
     {
-      image: './images/moisturizing_mousse.png',
+      image: 'gift_set_№1',
       alt: 'Подарочный набор №1',
       comment: 'для нормальной кожи',
       title: 'Подарочный набор №1',
@@ -57,11 +54,10 @@ export const productCards = [
         'минералы',
         'масла' 
       ],
-      textPrice: 'Цена',
       valuePrice: '4 750' 
     },
     {
-      image: './images/moisturizing_mousse.png',
+      image: 'gift_set_№5',
       alt: 'Подарочный набор №5',
       comment: 'для нормальной кожи',
       title: 'Подарочный набор №5',
@@ -72,7 +68,6 @@ export const productCards = [
         'минералы',
         'масла' 
       ],
-      textPrice: 'Цена',
       valuePrice: '7 520' 
     }
 ]
