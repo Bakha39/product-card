@@ -32,14 +32,15 @@ body {
 }
 
 .button-registration {
-    padding: 0px 12px;
-    border: 2px solid;
-    background: #c8ca5f;
-    color: rgb(52, 1, 1);
-    font-size: 17px;
+    padding: 5px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    color: #fff;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .button-registration:hover {
