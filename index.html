@@ -12,13 +12,16 @@
 </head>
 <body>
   <!-- Main -->
-  <main class="title">    
-    <h1 class="title__name">Выбери свой продукт</h1> 
-    <!-- <div class="title-buttons">
+  <div class="wrapper-buttons">
+    <div>
       <button id="toggle-color-card" class="title__button">Измени цвет карточки</button>
       <button id="change-colors-cards" class="title__button">Измени цвета карточек</button>
       <button id="toggle-color-button" class="title__button">Измени цвет кнопки</button>
-    </div> -->
+      <button class="button-registration">Регистрация</button>
+    </div>
+  </div>
+  <main class="title">   
+    <h1 class="title__name">Выбери свой продукт</h1> 
   </main>
   <div class="container">
     <ul class="catalog" id="catalog">
@@ -41,10 +44,78 @@
       </div>
     </li>
   </template>
-<!--   <script src="main.js"></script>
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <div class="footer__wrapper-text">
+        <p class="footer__wrapper-title">Product Cards</p>
+        <p class="footer__wrapper-desc">У нас самые лучшие продукты для кожи</p>
+        <a href=""><img class="footer__wrapper-telegram" src="images/tg-icon.svg" alt="icon_telegram"></a>
+        <a href=""><img class="footer__wrapper-VK" src="images/vk-icon.svg" alt="icon_VK"></a>
+      </div>
+      <div class="footer__wrapper-form">
+        <p class="footer__wrapper-form-title">Подпишись на наши акции:</p>
+        <form action="" class="footer__wrapper-form-email" id="form" method="">
+          <div class="footer__wrapper-form-email-info">
+            <input type="email" class="footer__wrapper-form-email-text" name="email" id="email" required placeholder="Введи Email...">
+            <div class="footer__wrapper-form-submit"> 
+              <hr class="footer__wrapper-form-email-line">
+              <button class="footer__wrapper-form-email-button">Подписаться</button>
+            </div>
+          </div>
+        </form> 
+        <div class="copyright">
+          <div class="overlay">
+            <div class="modal">
+              <div class="modal-content">
+                <form action="register" class="register-form" method="get" id="registerForm" novalidate>
+                    <h2>Регистрация</h2>
+                  
+                    <label for="formName">Имя пользователя *</label> 
+                    <input type="text" name="Name" id="formName" placeholder="Имя" required>
+                    
+                    <label for="lastName">Фамилия *</label>
+                    <input type="text" name="Lastname" id="lastName" placeholder="Фамилия" required>
+                    
+                    <label for="birthday">Дата рождения *</label>
+                    <input type="date" name="DOB" id="birthday" placeholder="Дата рождения" required>
+                    
+                    <label for="email-form">Электронная почта *</label>
+                    <input type="email" name="email" id="email-form" placeholder="Логин" required>
+                    
+                    <label for="password">Пароль *</label>
+                    <input type="password" name="Password" placeholder="Пароль" required id="password" pattern="^[A-Za-z0-9]{6,20}$">
+                    
+                    <label for="password-confirm">Подтверждение пароля *</label>
+                    <input type="password" name="ConfirmPassword" placeholder="Повторение пароля" required id="password-confirm">
+                    <p id="message" style="color:red"></p>
+                    <button type="submit" class="send-btn">Отправить</button>
+                </form>
+                <div class="modal-header">
+                  <button class="close-btn">&times;</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="copyright__line">
+          <p class="copyright__text">www.product-cards.com©all right reserve</p>
+        </div>
+      </div>
+      <nav class="footer__wrapper-links">
+        <p class="footer__wrapper-links-text">Быстрые ссылки</p>
+        <ul class="footer__wrapper-links-all">
+          <li ><a class="footer__wrapper-links-all-item" href="" >Главная</a></li>
+          <li ><a class="footer__wrapper-links-all-item" href="" >Магазин</a></li>
+          <li ><a class="footer__wrapper-links-all-item" href="" >Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- <script src="main.js"></script>
   <script src="homework-7.js"></script>
   <script src="homework-8.js"></script>
   <script type="module" src="homework-9.js"></script> -->
   <script type="module" src="homework-10.js"></script>
+  <script src="homework-11.js"></script>
 </body>
 </html>
