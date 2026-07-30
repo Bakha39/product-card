@@ -11,30 +11,31 @@ form.addEventListener("submit", (event) => {
 
 
 
-//5
-const openBtn = document.querySelector(".button-registration");
-const overlay = document.querySelector(".overlay");
-const closeBtn = document.querySelector(".close-btn");
+//5 
+
+export const openBtn = document.querySelector(".button-registration");
+export const overlay = document.querySelector(".overlay");
+export const closeBtn = document.querySelector(".close-btn");
 const modal = document.querySelector(".modal");
 
 openBtn.addEventListener("click", () => {
   overlay.classList.add("open");
-  modal.classList.add("showed");
+  /* modal.classList.add("showed"); */
 })
 
 closeBtn.addEventListener("click", () => {
   overlay.classList.remove("open");
-  modal.classList.remove("showed");
+  /* modal.classList.remove("showed"); */
 })
 
 
 //
-const password = document.getElementById("password");
-const confirmPassword = document.getElementById("password-confirm");
-const registerForm = document.getElementById("registerForm");
-const message = document.getElementById("message");
+export const password = document.getElementById("password");
+export const confirmPassword = document.getElementById("password-confirm");
+export const registerForm = document.getElementById("registerForm");
+export const message = document.getElementById("message");
 
-registerForm.addEventListener("submit", (event) => {
+/* registerForm.addEventListener("submit", (event) => {
 
   if (!registerForm.checkValidity()) {
     event.preventDefault();
@@ -57,7 +58,7 @@ registerForm.addEventListener("submit", (event) => {
   
   modal.classList.remove("showed");
   overlay.classList.remove("open");
-})
+}) */
 
 
 

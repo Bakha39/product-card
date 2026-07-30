@@ -1,43 +1,44 @@
-const toggleColorCardBtn = document.querySelector('#toggle-color-card')
-const productCard = document.querySelector('.product-card')
+import "./homework-6.js";
+import "./homework-7.js"
+import "./homework-8.js"
+import "./homework-9.js"
+import "./homework-10.js"
+import "./homework-11.js"
+import "./Modal.js"
+import "./Form.js"
 
-toggleColorCardBtn.addEventListener('click', () => {
-    productCard.classList.toggle('is-product-card');
-    console.log('Кнопка нажата');
-})
+class Metal{
+  constructor(name, meltingPoint, ) {
+    this.name = name;
+    this.meltingPoint = meltingPoint;   
+  }
 
-const colors = [
-    'rgba(200, 100, 255, 0.3)',
-    'rgba(150, 200, 255, 0.3)',
-    'rgba(240, 230, 140, 0.3)',
-    'rgba(100, 255, 255, 0.3)',
-    'rgba(150, 150, 255, 0.3)'
-]
+  showElement() {
+    console.log(`Химический элемент: ${this.name} \nТемпература плавления: ${this.meltingPoint} градусов по Цельсию`);
+  }
+}
 
-const changeColorsCardsBtns = document.querySelector('#change-colors-cards')
-const productCards = document.querySelectorAll('.product-card')
-
-changeColorsCardsBtns.addEventListener('click', () => {
-    productCards.forEach((cards, index) => {
-        cards.style.backgroundColor = colors[index]; 
-    })
-})
+const metalLi = new Metal('Litium', 180.5)
+metalLi.showElement()
 
 
-const openGooglePages = document.querySelectorAll('.product-card__button')
-openGooglePages.forEach((elements) => {
-elements.addEventListener('click', () => {
-    alert('Внимание: вы переходите по внешней ссылке');
-    window.open('https://google.com', '_blank');      
-})})
+class AmphotericMetal extends Metal{
+  constructor(name, meltingPoint, elementNumber) {
+    super(name, meltingPoint);
+    this.elementNumber = elementNumber;
+  }
 
-const titleName = document.querySelector('.title__name')
-titleName.addEventListener('mouseover', () => {
-    console.log(titleName);
-})
+  showNumber() {
+    console.log(`Номер элемента в периодической системе: ${this.elementNumber}`)
+  }
+}
 
-const toggleColorBtn = document.querySelector('#toggle-color-button')
-toggleColorBtn.addEventListener('click', () => {
-    toggleColorBtn.classList.toggle('title__button--color3');
-})
+const metalAl = new AmphotericMetal('Aluminium', 660.3, 13)
+const metalZn = new AmphotericMetal('Zinkum', 419.5, 30)
+
+metalAl.showElement()
+metalZn.showElement()
+metalZn.showNumber()
+
+
 

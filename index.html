@@ -65,7 +65,7 @@
         </form> 
         <div class="copyright">
           <div class="overlay">
-            <div class="modal">
+            <div class="modal" id="modalWindow">
               <div class="modal-content">
                 <form action="register" class="register-form" method="get" id="registerForm" novalidate>
                     <h2>Регистрация</h2>
@@ -88,7 +88,8 @@
                     <label for="password-confirm">Подтверждение пароля *</label>
                     <input type="password" name="ConfirmPassword" placeholder="Повторение пароля" required id="password-confirm">
                     <p id="message" style="color:red"></p>
-                    <button type="submit" class="send-btn">Отправить</button>
+                    <button class="send-btn">Отправить</button>
+                    <button class="reset-btn" type="reset">Сбросить</button>
                 </form>
                 <div class="modal-header">
                   <button class="close-btn">&times;</button>
@@ -110,12 +111,6 @@
       </nav>
     </div>
   </footer>
-
-  <!-- <script src="main.js"></script>
-  <script src="homework-7.js"></script>
-  <script src="homework-8.js"></script>
-  <script type="module" src="homework-9.js"></script> -->
-  <script type="module" src="homework-10.js"></script>
-  <script src="homework-11.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 </html>
