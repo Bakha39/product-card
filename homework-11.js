@@ -13,20 +13,20 @@ form.addEventListener("submit", (event) => {
 
 //5 
 
-export const openBtn = document.querySelector(".button-registration");
+export const openBtn = document.querySelector(".registration-button");
 export const overlay = document.querySelector(".overlay");
 export const closeBtn = document.querySelector(".close-btn");
 const modal = document.querySelector(".modal");
 
-openBtn.addEventListener("click", () => {
+/* openBtn.addEventListener("click", () => {
   overlay.classList.add("open");
-  /* modal.classList.add("showed"); */
+  modal.classList.add("showed");
 })
 
 closeBtn.addEventListener("click", () => {
   overlay.classList.remove("open");
-  /* modal.classList.remove("showed"); */
-})
+  modal.classList.remove("showed");
+}) */
 
 
 //

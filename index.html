@@ -17,7 +17,8 @@
       <button id="toggle-color-card" class="title__button">Измени цвет карточки</button>
       <button id="change-colors-cards" class="title__button">Измени цвета карточек</button>
       <button id="toggle-color-button" class="title__button">Измени цвет кнопки</button>
-      <button class="button-registration">Регистрация</button>
+      <button class="registration-button" id="registration-button">Регистрация</button>
+      <button class="auth-button" id="auth-button">Аутентификация</button>
     </div>
   </div>
   <main class="title">   
@@ -64,7 +65,7 @@
           </div>
         </form> 
         <div class="copyright">
-          <div class="overlay">
+          <div class="overlay" id="overlay">
             <div class="modal" id="modalWindow">
               <div class="modal-content">
                 <form action="register" class="register-form" method="get" id="registerForm" novalidate>
@@ -92,11 +93,35 @@
                     <button class="reset-btn" type="reset">Сбросить</button>
                 </form>
                 <div class="modal-header">
-                  <button class="close-btn">&times;</button>
+                  <button class="close-btn" id="close-btn">&times;</button>
                 </div>
               </div>
             </div>
           </div>
+          <div class="overlay" id="authOverlay">
+            <div class="modal" id="authModal">
+              <div class="modal-content">
+                <form action="register" class="register-form" method="get" id="registerForm" novalidate>
+                    <h2>Аутентификация</h2>
+                    <label for="email-form">Электронная почта *</label>
+                    <input type="email" name="email" id="email-form" placeholder="Логин" required>
+                    
+                    <label for="password">Пароль *</label>
+                    <input type="password" name="Password" placeholder="Пароль" required id="password" pattern="^[A-Za-z0-9]{6,20}$">
+                    
+                    <label for="password-confirm">Подтверждение пароля *</label>
+                    <input type="password" name="ConfirmPassword" placeholder="Повторение пароля" required id="password-confirm">
+                    <p id="message" style="color:red"></p>
+                    <button class="send-btn">Отправить</button>
+                    <button class="reset-btn" type="reset">Сбросить</button>
+                </form>
+                <div class="modal-header">
+                  <button class="close-btn" id="close-btn">&times;</button>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div> 
           <hr class="copyright__line">
           <p class="copyright__text">www.product-cards.com©all right reserve</p>
         </div>
