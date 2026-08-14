@@ -1,50 +1,69 @@
 /* import { closeBtn, openBtn } from "./homework-11.js" */
 
-
 export class Modal {
-  initCloseOverlay(shouldOverlayClose) {
-    this.overlay.addEventListener('click', (event) => {
-      if(event.target === this.overlay && shouldOverlayClose) {
-        this.close();
-        console.log('Давай до свидания');
-      }
-    })
-  }
-
-  constructor(modalId, overlayId, buttonId) {
+  constructor(modalId, buttonId, shouldOverlayClose) {
     this.modal = document.querySelector(modalId);
-    this.overlay = document.querySelector(overlayId);
-    this.#initOpen(buttonId);
-    this.#initClose();
+    this.overlay = document.querySelector('.overlay');
+    this.shouldOverlayClose = shouldOverlayClose;
+
+    this.handleCloseButton = this.handleCloseButton.bind(this);
+    this.handleOverlayClick = this.handleOverlayClick.bind(this);
+
+    this.initOpen(buttonId);
   }
 
   open() {
-    this.overlay.classList.add("overlay-showed");
-    this.modal.classList.add("modal-showed");
-    console.log("Окно открыто");
+    this.overlay.classList.add('overlay-showed');
+    this.modal.classList.add('modal-showed');
+
+    this.initClose();
+
+    console.log('Окно открыто');
+  }
+
+  initOpen(buttonId) {
+    const button = document.getElementById(buttonId);
+
+    button.addEventListener('click', () => {
+      this.open();
+    });
+  }
+
+  initClose() {
+    const closeButton = this.modal.querySelector('#close-btn');
+
+    closeButton.addEventListener('click', this.handleCloseButton);
+
+    if (this.shouldOverlayClose) {
+      this.overlay.addEventListener('click', this.handleOverlayClick);
+    }
+  }
+
+  handleCloseButton() {
+    this.close();
+  }
+
+  handleOverlayClick(event) {
+    if (event.target === this.overlay) {
+      this.close();
+      console.log('Давай до свидания');
+    }
   }
 
   close() {
-    this.overlay.classList.remove("overlay-showed");
-    this.modal.classList.remove("modal-showed");
-    console.log("Окно закрыто");
-  }  
+    const closeButton = this.modal.querySelector('#close-btn');
+
+    closeButton.removeEventListener('click', this.handleCloseButton);
+
+    this.overlay.removeEventListener('click', this.handleOverlayClick);
+
+    this.overlay.classList.remove('overlay-showed');
+    this.modal.classList.remove('modal-showed');
+
+    console.log('Окно закрыто');
+  }
 
   isOpen() {
-    return this.modal.classList.contains("modal-showed");
-  }
-
-  #initOpen(buttonId) {
-    const button = document.getElementById(buttonId);
-    button.addEventListener('click', () => {
-      this.open();
-    })
-  }
-
-  #initClose() {
-    const closeButton = this.modal.querySelector('#close-btn');
-    closeButton.addEventListener('click', () => {
-      this.close();
-    })
+    return this.modal.classList.contains('modal-showed');
   }
 }
