@@ -1,29 +1,69 @@
-import { closeBtn, openBtn } from "./homework-11.js"
+/* import { closeBtn, openBtn } from "./homework-11.js" */
 
-export const modalWindow = document.getElementById('modalWindow')
+export class Modal {
+  constructor(modalId, buttonId, shouldOverlayClose) {
+    this.modal = document.querySelector(modalId);
+    this.overlay = document.querySelector('.overlay');
+    this.shouldOverlayClose = shouldOverlayClose;
 
-class Modal {
-  constructor(modalWindow) {
-    this.modalWindow = modalWindow;
+    this.handleCloseButton = this.handleCloseButton.bind(this);
+    this.handleOverlayClick = this.handleOverlayClick.bind(this);
+
+    this.initOpen(buttonId);
   }
 
-  showModal() {
-    this.modalWindow.style.display = 'block';
-    console.log("Окно открыто")
+  open() {
+    this.overlay.classList.add('overlay-showed');
+    this.modal.classList.add('modal-showed');
+
+    this.initClose();
+
+    console.log('Окно открыто');
   }
 
-  closeModal() {
-    this.modalWindow.style.display = 'none';
-    console.log("Окно закрыто");
-  }  
+  initOpen(buttonId) {
+    const button = document.getElementById(buttonId);
+
+    button.addEventListener('click', () => {
+      this.open();
+    });
+  }
+
+  initClose() {
+    const closeButton = this.modal.querySelector('#close-btn');
+
+    closeButton.addEventListener('click', this.handleCloseButton);
+
+    if (this.shouldOverlayClose) {
+      this.overlay.addEventListener('click', this.handleOverlayClick);
+    }
+  }
+
+  handleCloseButton() {
+    this.close();
+  }
+
+  handleOverlayClick(event) {
+    if (event.target === this.overlay) {
+      this.close();
+      console.log('Давай до свидания');
+    }
+  }
+
+  close() {
+    const closeButton = this.modal.querySelector('#close-btn');
+
+    closeButton.removeEventListener('click', this.handleCloseButton);
+
+    this.overlay.removeEventListener('click', this.handleOverlayClick);
+
+    this.overlay.classList.remove('overlay-showed');
+    this.modal.classList.remove('modal-showed');
+
+    console.log('Окно закрыто');
+  }
 
   isOpen() {
-    return getComputedStyle(this.modalWindow).display !== "none"
+    return this.modal.classList.contains('modal-showed');
   }
 }
-
-const modalVariable = new Modal(modalWindow)
-
-closeBtn.addEventListener("click", () => modalVariable.closeModal());
-openBtn.addEventListener("click", () => modalVariable.showModal());
-console.log(modalVariable.isOpen())

@@ -31,7 +31,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.button-registration {
+.registration-button {
     padding: 5px;
     border: none;
     border-radius: 12px;
@@ -43,7 +43,23 @@ body {
     transition: all 0.3s ease;
 }
 
-.button-registration:hover {
+.registration-button:hover {
+    transform: scale(1.1);
+}
+
+.auth-button {
+    padding: 5px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.auth-button:hover {
     transform: scale(1.1);
 }
 
@@ -408,14 +424,14 @@ body {
     display: none; /* включите block, когда нужно показать */
 }
 
-.overlay.open {
+.overlay-showed {
     display: block;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* .modal {
+.modal {
     position: fixed;
     display: none;
     z-index: 100;
@@ -425,11 +441,11 @@ body {
     width: 500px;
 }
 
-.modal.showed {
+.modal-showed {
     display: block;
-} */
+}
 
-#modalWindow {
+/* #modalWindow {
     position: fixed;
     display: none;
     z-index: 100;
@@ -437,7 +453,7 @@ body {
     padding: 5px;
     border-radius: 12px;
     width: 500px;
-}
+} */
 
 .close-btn {
     position: absolute;

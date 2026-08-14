@@ -1,6 +1,7 @@
 
 import { registerForm, message, password, confirmPassword, overlay, openBtn } from "./homework-11.js"
-import { modalWindow } from "./Modal.js"
+/* import { modalWindow } from "./Modal.js" */
+const modalWindow = document.getElementById('modalWindow')
 
 class Form {
   constructor(form) {
@@ -12,23 +13,23 @@ class Form {
   }
 
   isValid(event) {
-      event.preventDefault()
-      if (!this.form.checkValidity()) {
-        message.textContent = "Регистрация не пройдена";
-        this.form.reportValidity();
-        console.log(this.form.checkValidity())
-        return;      
-      }
-
-      if (password.value !== confirmPassword.value) {
-        message.textContent = "Пароли не совпадают";
-        console.log(password.value === confirmPassword.value)
-        return;
-      }
-
-      modalWindow.style.display = 'none';
-      overlay.classList.remove("open");
+    event.preventDefault()
+    if (!this.form.checkValidity()) {
+      message.textContent = "Регистрация не пройдена";
+      this.form.reportValidity();
       console.log(this.form.checkValidity())
+      return;      
+    }
+
+    if (password.value !== confirmPassword.value) {
+      message.textContent = "Пароли не совпадают";
+      console.log(password.value === confirmPassword.value)
+      return;
+    }
+
+    modalWindow.style.display = 'none';
+    overlay.classList.remove("overlay-showed");
+    console.log(this.form.checkValidity())
   }
 
   reset(event) {
